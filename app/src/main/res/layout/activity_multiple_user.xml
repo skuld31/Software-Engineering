@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyeonseob.beacontriangulation.Activity.MultipleUserActivity"
+    android:id="@+id/Linear1">
+
+        <ImageView
+            android:id="@+id/mapImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/map_8f"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:background="#88707070"
+            android:alpha="80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:id="@+id/statusLayout">
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="START"
+                android:onClick="onButtonClicked"
+                android:id="@+id/button" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </RelativeLayout>
+</RelativeLayout>

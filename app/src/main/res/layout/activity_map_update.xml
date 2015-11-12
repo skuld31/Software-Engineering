@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/mapImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/map_8f"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:background="#88707070"
+        android:alpha="80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:id="@+id/statusTextView" />
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: "
+            android:id="@+id/idTextView" />
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSSI: "
+            android:id="@+id/RSSITextView" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="↑"
+            android:id="@+id/upButton"
+            android:onClick="onButtonClicked"
+            android:layout_marginStart="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="→"
+            android:id="@+id/rightButton"
+            android:layout_below="@+id/upButton"
+            android:layout_toEndOf="@+id/upButton"
+            android:onClick="onButtonClicked"/>
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="↓"
+            android:id="@+id/downButton"
+            android:layout_below="@+id/rightButton"
+            android:layout_toStartOf="@+id/rightButton"
+            android:onClick="onButtonClicked"/>
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="←"
+            android:id="@+id/leftButton"
+            android:layout_below="@+id/upButton"
+            android:layout_toStartOf="@+id/downButton"
+            android:onClick="onButtonClicked"/>
+
+    </RelativeLayout>
+</RelativeLayout>

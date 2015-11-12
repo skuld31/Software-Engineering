@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hyeonseob.beacontriangulation" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service android:name="com.perples.recosdk.RECOBeaconService" />
+
+        <activity
+            android:name=".Intro.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RECO.RECOMonitoringActivity" />
+        <activity android:name=".RECO.RECORangingActivity" />
+
+        <service android:name=".RECO.RECOBackgroundMonitoringService" />
+        <service android:name=".RECO.RECOBackgroundRangingService" />
+
+        <activity
+            android:name=".Activity.ConfigurationActivity"
+            android:label="@string/title_activity_fingerprint_management"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Activity.MapActivity"
+            android:label="@string/title_activity_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Activity.ConfidenceIntervalActivity"
+            android:label="@string/title_activity_ranging"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Activity.MapUpdateActivity"
+            android:label="@string/title_activity_map_update"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Activity.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Intro.RotateActivity"
+            android:label="@string/title_activity_rotate"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Intro.HoldActivity"
+            android:label="@string/title_activity_hold"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Intro.StartingActivity"
+            android:label="@string/title_activity_starting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Intro.BluetoothActivity"
+            android:label="@string/title_activity_bluetooth"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Activity.MultipleUserActivity"
+            android:label="@string/title_activity_multiple_user" >
+        </activity>
+        <activity
+            android:name=".Activity.BeaconTestActivity"
+            android:label="@string/title_activity_beacon_test" >
+        </activity>
+        <activity
+            android:name=".Intro.BluetoothActivity2"
+            android:label="@string/title_activity_bluetooth2" >
+        </activity>
+        <activity
+            android:name=".Intro.RotateActivity2"
+            android:label="@string/title_activity_rotate2" >
+        </activity>
+        <activity
+            android:name=".Intro.HoldActivity2"
+            android:label="@string/title_activity_hold2" >
+        </activity>
+        <activity
+            android:name=".Intro.StartingActivity2"
+            android:label="@string/title_activity_starting2" >
+        </activity>
+    </application>
+
+</manifest>
